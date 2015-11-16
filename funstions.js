@@ -84,7 +84,7 @@ numberArray.push(makeObjects(5,"Ali"));
 numberArray.push(makeObjects(24,"Ziad"));
 numberArray.push(makeObjects(32,"Kevin"));
 numberArray.push(makeObjects(-13,"John"));
-console.log(numberArray);
+//console.log(numberArray);
 
 var reformatteObjectArray = numberArray.map(function(obj){ 
    var rObj = {};
@@ -92,4 +92,57 @@ var reformatteObjectArray = numberArray.map(function(obj){
    rObj.name = obj.name;
    return rObj;
 });
-console.log(reformatteObjectArray);
+//console.log(reformatteObjectArray);
+
+
+
+
+//Ex5------------------------------------------
+function operationMaker(string){
+    switch (string){
+        case "add":
+            return sum;
+            break;
+        case "subtract":
+            return sub;
+            break;
+        case "mult":
+            return multiply;
+            break;
+        case "div":
+            return divide;
+            break;
+        default:
+            return undefined;
+            break;
+        
+    }
+}
+
+function sum(a,b){
+    return a+b;
+}
+
+
+function sub(a,b){
+    return a-b;
+}
+
+
+function multiply(a,b){
+    return a*b;
+}
+
+function divide(a,b){
+    return a/b;
+}
+
+var adder = operationMaker("add");
+var sum1 = adder(5, 10); //15
+
+console.log(sum1);
+
+var multiplier = operationMaker("mult");
+var product = multiplier(5, 10); // 50
+
+console.log(product);

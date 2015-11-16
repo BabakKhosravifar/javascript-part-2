@@ -62,4 +62,34 @@ function square(number){
 }
 
 
-console.log(squares);
+//console.log(squares);
+
+
+//Ex4------------------------------------------
+function makeObjects(n,name){
+var numberObject= {
+    num: n,
+    name: name
+};
+return numberObject;
+}
+
+function squareNum(number){
+    return number.num*number.num;
+}
+
+var numberArray = [];
+numberArray.push(makeObjects(3,"Babak"));
+numberArray.push(makeObjects(5,"Ali"));
+numberArray.push(makeObjects(24,"Ziad"));
+numberArray.push(makeObjects(32,"Kevin"));
+numberArray.push(makeObjects(-13,"John"));
+console.log(numberArray);
+
+var reformatteObjectArray = numberArray.map(function(obj){ 
+   var rObj = {};
+   rObj.num = obj.num*obj.num;
+   rObj.name = obj.name;
+   return rObj;
+});
+console.log(reformatteObjectArray);

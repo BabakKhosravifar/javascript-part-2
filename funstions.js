@@ -47,7 +47,19 @@ function compareByEmail(a, b) {
   return 0;
 }
 
-objectArray.sort(compareByName);
-console.log(objectArray);
-objectArray.sort(compareByEmail);
-console.log(objectArray);
+//objectArray.sort(compareByName);
+//console.log(objectArray);
+//objectArray.sort(compareByEmail);
+//console.log(objectArray);
+
+
+//Ex3------------------------------------------
+var numbers = [1, -4, 2.064, 5.978, -7, 4.07, 39];
+var squares = numbers.map(square);
+
+function square(number){
+    return number*number;
+}
+
+
+console.log(squares);
